@@ -155,11 +155,15 @@ Site will be live at `https://ecosfera-salon.netlify.app` (customizable domain)
 4. Deploy!
 
 ### GitHub Pages
+Automated via GitHub Actions (`.github/workflows/pages.yml`). Serves the root of the repository which redirects to `ecosfera-site/`.
 
-1. Push to GitHub
-2. Repository Settings → Pages
-3. Source: `main` branch, `/ecosfera-site` folder
-4. Save → Live at `https://USERNAME.github.io/Ecosfera-Salon-Fryzjerski/`
+1. Ensure workflow file is present (added in this repo).
+2. Push to `main` — action uploads and deploys.
+3. First run: go to Repository Settings → Pages and confirm it is enabled (should auto‑detect workflow).
+4. Site URL: `https://<YOUR-ACCOUNT>.github.io/Ecosfera-Salon-Fryzjerski/` (root redirects to `/ecosfera-site/index.html`).
+5. Cache/invalidations handled by Pages automatically; changes deploy on each push.
+
+If you prefer the folder source method (no workflow): set Source = `main` / root instead of `/ecosfera-site` so the redirect works. The current workflow is recommended for future extensibility (e.g. pre‑deploy checks, minification).
 
 ---
 
