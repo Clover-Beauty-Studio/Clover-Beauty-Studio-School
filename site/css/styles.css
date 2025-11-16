@@ -50,7 +50,7 @@ img {
   --color-text: #2D2D2D;           /* Deep Charcoal */
   --color-text-light: #6B6B6B;     /* Medium Gray */
   --color-white: #FFFFFF;
-  
+
   /* Typography */
   --font-heading: 'Poppins', 'Montserrat', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -98,6 +98,85 @@ body {
   background: var(--color-bg);
   overflow-x: hidden;
 }
+
+/* =========================
+   Emerald Theme Overrides
+   ========================= */
+.theme-emerald {
+  --color-primary: #0E4D3F; /* deep emerald */
+  --color-secondary: #127C62; /* vibrant teal */
+  --color-accent: #F3A712; /* warm amber */
+  --color-bg: #F4FBF8; /* near-white mint */
+  --color-bg-alt: #FFFFFF;
+  --color-text: #0E2120; /* deep greenish black */
+  --color-text-light: #3D5E59; /* muted teal gray */
+  --color-white: #FFFFFF;
+}
+
+.theme-emerald .btn-primary,
+.theme-emerald .btn-team,
+.theme-emerald .btn-secondary:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Ensure readable contrast on emerald secondary buttons */
+.theme-emerald .btn-secondary {
+  color: var(--color-white) !important;
+}
+
+/* Force readable text colors site-wide */
+.btn-primary,
+.btn-secondary,
+.btn-team,
+.btn-hero,
+.service-badge,
+.service-badge-small,
+.profile-card-button,
+.label-before,
+.label-after {
+  color: var(--color-white) !important;
+}
+
+.theme-emerald .nav-links a:hover,
+.theme-emerald .nav-links a.active {
+  color: var(--color-text) !important;
+}
+
+.theme-emerald .nav,
+.theme-emerald .footer {
+  background: var(--color-bg-alt);
+}
+
+/* Emerald nav clean overrides to avoid pink tints */
+.theme-emerald .nav {
+  box-shadow: 0 4px 24px rgba(14, 77, 63, 0.08);
+  border-bottom: 1px solid rgba(18, 124, 98, 0.12);
+}
+.theme-emerald .nav.scrolled {
+  box-shadow: 0 8px 36px rgba(14, 77, 63, 0.12);
+}
+.theme-emerald .nav::before,
+.theme-emerald .nav::after {
+  background: none;
+}
+
+.theme-emerald a { color: var(--color-secondary); }
+.theme-emerald a:hover { color: var(--color-primary); }
+
+.theme-emerald .page-hero {
+  background: linear-gradient(135deg, rgba(18,124,98,0.08), rgba(14,77,63,0.08));
+}
+
+.theme-emerald .service-badge-small,
+.theme-emerald .service-badge {
+  background: var(--color-accent);
+  color: #1b1202;
+}
+
+.theme-emerald .team-card.no-photo .team-card-content h3 { color: var(--color-text); }
+.theme-emerald .team-card.no-photo .team-card-content .team-role { color: var(--color-secondary); }
 
 img {
   max-width: 100%;
@@ -216,6 +295,13 @@ button {
   font-weight: 700;
   color: var(--color-secondary);
   letter-spacing: 0.05em;
+}
+
+/* Consistent logo image sizing across pages */
+.nav .logo img {
+  height: 56px;
+  width: auto;
+  display: block;
 }
 
 .nav-right {
@@ -358,7 +444,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(246, 215, 227, 0.6) 0%, rgba(199, 122, 138, 0.3) 100%);
+  background: linear-gradient(135deg, rgba(18, 124, 98, 0.2) 0%, rgba(14, 77, 63, 0.15) 100%);
   border-radius: var(--radius-sm);
   opacity: 0;
   transition: opacity 0.3s;
@@ -376,11 +462,11 @@ button {
 }
 
 .nav-links a.active {
-  background: linear-gradient(135deg, rgba(246, 215, 227, 0.8) 0%, rgba(199, 122, 138, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(18, 124, 98, 0.25) 0%, rgba(14, 77, 63, 0.2) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   color: var(--color-secondary);
-  box-shadow: 0 2px 8px rgba(199, 122, 138, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(18, 124, 98, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .mobile-menu-toggle {
@@ -415,7 +501,8 @@ button {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: url('../images/hero-pattern.svg') center/cover;
+  /* Removed missing asset to avoid 404 and layout jank */
+  background: none;
   opacity: 0.1;
   pointer-events: none;
 }
@@ -2369,7 +2456,7 @@ button {
 .footer {
   background: var(--color-text);
   color: var(--color-white);
-  padding: var(--space-xl) 0 var(--space-md);
+  padding: var(--space-md) 0;
 }
 
 .footer-grid {

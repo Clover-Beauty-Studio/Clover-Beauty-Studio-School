@@ -10,10 +10,88 @@
 
   // === Language Support ===
   let currentLang = localStorage.getItem('clover-lang') || 'pl';
+  const translationsCache = {};
+  const hasLegacyTranslations = typeof window !== 'undefined' && window.translations;
 
-  // Load translations
+  async function ensureLang(lang) {
+    if (translationsCache[lang]) return;
+    try {
+      const res = await fetch(`js/i18n/${lang}.json`, { cache: 'no-store' });
+      if (res.ok) {
+        translationsCache[lang] = await res.json();
+      }
+    } catch (_) {
+      // ignore network errors, fallback to legacy
+    }
+    if (!translationsCache[lang] && hasLegacyTranslations) {
+      translationsCache[lang] = window.translations[lang] || {};
+    }
+  }
+
+  // Translate key with fallbacks
   function t(key) {
-    return translations[currentLang]?.[key] || translations['pl'][key] || key;
+    return (
+      translationsCache[currentLang]?.[key] ||
+      (hasLegacyTranslations ? (window.translations[currentLang]?.[key] || window.translations['pl']?.[key]) : undefined) ||
+      translationsCache['pl']?.[key] ||
+      key
+    );
+  }
+
+  // === Auto-contrast for text on colored backgrounds ===
+  function srgbToLinear(c) {
+    const cs = c / 255;
+    return cs <= 0.03928 ? cs / 12.92 : Math.pow((cs + 0.055) / 1.055, 2.4);
+  }
+
+  function luminance([r, g, b]) {
+    const R = srgbToLinear(r);
+    const G = srgbToLinear(g);
+    const B = srgbToLinear(b);
+    return 0.2126 * R + 0.7152 * G + 0.0722 * B;
+  }
+
+  function parseRgb(str) {
+    const m = str.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?\)/);
+    if (!m) return null;
+    return [parseInt(m[1], 10), parseInt(m[2], 10), parseInt(m[3], 10), m[4] !== undefined ? parseFloat(m[4]) : 1];
+  }
+
+  function getEffectiveBackground(el) {
+    let node = el;
+    while (node && node !== document.documentElement) {
+      const cs = getComputedStyle(node);
+      const bg = cs.backgroundColor;
+      const rgba = parseRgb(bg);
+      if (rgba && rgba[3] > 0) return rgba;
+      node = node.parentElement;
+    }
+    return [255, 255, 255, 1];
+  }
+
+  function chooseTextColor(bgRgb) {
+    const L = luminance(bgRgb);
+    const contrastWhite = (1.05) / (L + 0.05);
+    const contrastBlack = (L + 0.05) / 0.05;
+    return contrastWhite >= contrastBlack ? '#ffffff' : '#000000';
+  }
+
+  function applyAutoContrast() {
+    const targets = document.querySelectorAll([
+      '.btn-primary',
+      '.btn-secondary',
+      '.btn-team',
+      '.service-badge',
+      '.service-badge-small',
+      '.profile-card-button',
+      '[data-auto-contrast]'
+    ].join(','));
+
+    targets.forEach((el) => {
+      const rgba = getEffectiveBackground(el);
+      const color = chooseTextColor(rgba);
+      el.style.color = color;
+    });
   }
 
   // Update all translatable elements
@@ -49,15 +127,17 @@
     
     // Update active language in switcher
     updateLanguageSwitcherState();
+
+    // Ensure readable text colors after content updates
+    try { applyAutoContrast(); } catch (e) {}
   }
 
   // Switch language
-  function switchLanguage(lang) {
-    if (translations[lang]) {
-      currentLang = lang;
-      localStorage.setItem('clover-lang', lang);
-      updateTranslations();
-    }
+  async function switchLanguage(lang) {
+    await ensureLang(lang);
+    currentLang = lang;
+    localStorage.setItem('clover-lang', lang);
+    updateTranslations();
   }
 
   // Update language switcher button states
@@ -73,7 +153,7 @@
   }
 
   // Initialize language switcher
-  function initLanguageSwitcher() {
+  async function initLanguageSwitcher() {
     const dropdownBtn = document.getElementById('langDropdownBtn');
     const dropdownMenu = document.getElementById('langDropdownMenu');
     const currentFlagEl = document.getElementById('currentFlag');
@@ -86,8 +166,11 @@
     const langData = {
       'pl': { flag: '🇵🇱', name: 'PL' },
       'en': { flag: '🇬🇧', name: 'EN' },
-      'uk': { flag: '🇺🇦', name: 'UK' }
+      'ua': { flag: '🇺🇦', name: 'UA' }
     };
+
+    // Load dictionary for current language first
+    await ensureLang(currentLang);
 
     // Set initial language display
     const data = langData[currentLang] || langData['pl'];

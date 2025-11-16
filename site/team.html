@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://d375139ucebi94.cloudfront.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="js/translations.js"></script>
+  <script src="js/translations.js" defer></script>
+  <meta name="theme-color" content="#0E4D3F">
 </head>
-<body>
+<body class="theme-emerald">
   <!-- Navigation -->
   <nav class="nav">
     <div class="container">
       <div class="nav-content">
-        <a href="index.html" class="logo"><img src="https://d375139ucebi94.cloudfront.net/region2/pl/177023/logo/3f59dc8117a04b05a6fcd7481dc490-clover-beauty-studio-school-logo-2f29787aff4c4b878d16d34ae87509-booksy.jpeg" alt="Clover Beauty Studio & School" style="height: 65px;"></a>
+        <a href="index.html" class="logo"><img src="https://d375139ucebi94.cloudfront.net/region2/pl/177023/logo/3f59dc8117a04b05a6fcd7481dc490-clover-beauty-studio-school-logo-2f29787aff4c4b878d16d34ae87509-booksy.jpeg" alt="Clover Beauty Studio & School" loading="eager" fetchpriority="high" decoding="async"></a>
         <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
@@ -47,7 +49,7 @@
                 <span class="flag-icon">🇬🇧</span>
                 <span>English</span>
               </button>
-              <button class="lang-option" data-lang="uk">
+              <button class="lang-option" data-lang="ua">
                 <span class="flag-icon">🇺🇦</span>
                 <span>Українська</span>
               </button>
@@ -109,6 +111,32 @@
           <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-team" target="_blank" rel="noopener" data-i18n="team.book">Book appointment</a>
         </div>
       </article>
+
+      <!-- Browist (no photo) -->
+      <article class="team-card no-photo">
+        <div class="team-card-image" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;background:var(--color-bg-alt);color:var(--color-secondary);min-height:280px;border-radius:12px;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zm0 2c-4.418 0-8 2.239-8 5v3h16v-3c0-2.761-3.582-5-8-5z"/></svg>
+        </div>
+        <div class="team-card-content">
+          <h3>Browist</h3>
+          <p class="team-role" data-i18n="team.browist.role">Browist</p>
+          <p class="team-desc" data-i18n="team.browist.desc">Stylizacja brwi, laminacja, henna</p>
+          <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-team" target="_blank" rel="noopener" data-i18n="team.book">Book appointment</a>
+        </div>
+      </article>
+
+      <!-- Młodszy specjalista (no photo) -->
+      <article class="team-card no-photo">
+        <div class="team-card-image" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;background:var(--color-bg-alt);color:var(--color-secondary);min-height:280px;border-radius:12px;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zm0 2c-4.418 0-8 2.239-8 5v3h16v-3c0-2.761-3.582-5-8-5z"/></svg>
+        </div>
+                <div class="team-card-content">
+          <h3>Młodszy specjalista</h3>
+          <p class="team-role" data-i18n="team.junior.role">Junior Specialist</p>
+          <p class="team-desc" data-i18n="team.junior.desc">Usługi beauty pod nadzorem</p>
+          <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-team" target="_blank" rel="noopener" data-i18n="team.book">Book appointment</a>
+        </div>
+      </article>
     </div>
   </main>
 
@@ -139,9 +167,13 @@
         <div class="footer-col">
           <h4 data-i18n="footer.hours">Godziny otwarcia</h4>
           <ul class="hours-list">
-            <li><span data-i18n="hours.mon-fri">Pon - Pt</span> <strong>09:00 - 19:00</strong></li>
-            <li><span data-i18n="hours.saturday">Sobota</span> <strong>09:00 - 15:00</strong></li>
-            <li><span data-i18n="hours.sunday">Niedziela</span> <strong><span data-i18n="hours.closed">Zamknięte</span></strong></li>
+            <li>Poniedziałek <strong>09:00 - 19:00</strong></li>
+            <li>Wtorek <strong>09:00 - 19:00</strong></li>
+            <li>Środa <strong>09:00 - 19:00</strong></li>
+            <li>Czwartek <strong>09:00 - 19:00</strong></li>
+            <li>Piątek <strong>09:00 - 19:00</strong></li>
+            <li>Sobota <strong>09:00 - 19:00</strong></li>
+            <li>Niedziela <strong>09:00 - 19:00</strong></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -167,6 +199,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

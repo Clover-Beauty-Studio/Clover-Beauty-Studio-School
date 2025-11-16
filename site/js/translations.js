@@ -141,6 +141,29 @@ const translations = {
     'services.filter.lashes': 'Rzęsy',
     'services.filter.makeup': 'Makijaż',
     'services.filter.training': 'Szkolenia',
+    'services.filter.promo': 'Promocje',
+    'services.filter.hair': 'Fryzjerstwo 🍀',
+    'services.filter.browslashmakeup': 'Brows/Lashmaker/Make up✨',
+    'services.filter.evgenia': 'Evgenia Kirichok',
+
+    // Services categories
+    'svc.promo.title': 'Promocja do końca jesieni🍂',
+    'svc.promo.desc': 'Skorzystaj z ograniczonych czasowo ofert specjalnych',
+    'svc.hair.title': 'Fryzjerstwo 🍀',
+    'svc.hair.desc': 'Usługi strzyżenia, koloryzacji i stylizacji włosów',
+    'svc.hair.note': 'Ceny zależą od długości i gęstości włosów oraz wybranego poziomu stylisty.',
+    'svc.brows.title': 'Brows/Lashmaker/Make up✨',
+    'svc.brows.desc': 'Stylizacja brwi, rzęs i profesjonalny makijaż',
+    'svc.evgenia.title': 'Farbowanie/cięcie/pielęgnacja Evgenia Kirichok',
+    'svc.evgenia.desc': 'Wybrane usługi prowadzone przez Yevhenię Kirichok',
+
+    // Price tooltip
+    'price.tooltip.estimate': 'Cena orientacyjna – dokładna wycena po konsultacji',
+
+    // CTA (services page)
+    'cta.transform.title': 'Gotowa na przemianę?',
+    'cta.transform.desc': 'Zarezerwuj swoją wizytę już dziś i ciesz się pięknem',
+    'cta.transform.button': 'Umów wizytę online',
     
     // WhatsApp
     'whatsapp.quick': 'Szybkie pytanie?',
@@ -297,6 +320,29 @@ const translations = {
     'services.filter.lashes': 'Lashes',
     'services.filter.makeup': 'Makeup',
     'services.filter.training': 'Training',
+    'services.filter.promo': 'Promotions',
+    'services.filter.hair': 'Hairdressing 🍀',
+    'services.filter.browslashmakeup': 'Brows/Lashmaker/Make up✨',
+    'services.filter.evgenia': 'Evgenia Kirichok',
+
+    // Services categories
+    'svc.promo.title': 'Promotion until end of Autumn🍂',
+    'svc.promo.desc': 'Take advantage of limited-time special offers',
+    'svc.hair.title': 'Hairdressing 🍀',
+    'svc.hair.desc': 'Haircut, colouring and styling services',
+    'svc.hair.note': 'Prices depend on hair length, density and chosen stylist level.',
+    'svc.brows.title': 'Brows/Lashmaker/Make up✨',
+    'svc.brows.desc': 'Brow styling, lashes and professional makeup',
+    'svc.evgenia.title': 'Colour/Cut/Care by Yevheniia Kirichok',
+    'svc.evgenia.desc': 'Selected services performed by Yevheniia Kirichok',
+
+    // Price tooltip
+    'price.tooltip.estimate': 'Indicative price – exact quote after consultation',
+
+    // CTA (services page)
+    'cta.transform.title': 'Ready for a transformation?',
+    'cta.transform.desc': 'Book your appointment today and enjoy your beauty',
+    'cta.transform.button': 'Book an appointment online',
     
     // WhatsApp
     'whatsapp.quick': 'Quick question?',
@@ -453,6 +499,29 @@ const translations = {
     'services.filter.lashes': 'Вії',
     'services.filter.makeup': 'Макіяж',
     'services.filter.training': 'Навчання',
+    'services.filter.promo': 'Промоакції',
+    'services.filter.hair': 'Перукарство 🍀',
+    'services.filter.browslashmakeup': 'Brows/Lashmaker/Make up✨',
+    'services.filter.evgenia': 'Євгенія Киричок',
+
+    // Services categories
+    'svc.promo.title': 'Акція до кінця осені🍂',
+    'svc.promo.desc': 'Скористайтеся спеціальними пропозиціями з обмеженим часом',
+    'svc.hair.title': 'Перукарство 🍀',
+    'svc.hair.desc': 'Послуги стрижки, фарбування та укладки волосся',
+    'svc.hair.note': 'Ціни залежать від довжини, густоти волосся та рівня спеціаліста.',
+    'svc.brows.title': 'Brows/Lashmaker/Make up✨',
+    'svc.brows.desc': 'Стилізація брів, вії та професійний макіяж',
+    'svc.evgenia.title': 'Фарбування/стрижка/догляд від Євгенії Киричок',
+    'svc.evgenia.desc': 'Вибрані послуги від Євгенії Киричок',
+
+    // Price tooltip
+    'price.tooltip.estimate': 'Орієнтовна ціна — точний розрахунок після консультації',
+
+    // CTA (services page)
+    'cta.transform.title': 'Готові до трансформації?',
+    'cta.transform.desc': 'Запишіться вже сьогодні та насолоджуйтесь красою',
+    'cta.transform.button': 'Записатися онлайн',
     
     // WhatsApp
     'whatsapp.quick': 'Швидке запитання?',

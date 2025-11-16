@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://d375139ucebi94.cloudfront.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#E8D5E0">
-  <script src="js/translations.js"></script>
+  <meta name="theme-color" content="#0E4D3F">
+  <script src="js/translations.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -20,32 +21,28 @@
     "image": "https://cloverbeauty.pl/images/hero.jpg",
     "@id": "https://cloverbeauty.pl",
     "url": "https://cloverbeauty.pl",
-    "telephone": "+48796591162",
+    "telephone": "+48 796 591 162",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Aleja Rzeczypospolitej 8 Lokal u.6",
       "addressLocality": "Warszawa",
       "postalCode": "02-972",
-      "addressRegion": "Mokotów",
+      "addressRegion": "Wilanów",
       "addressCountry": "PL"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "250"
+      "ratingValue": "4.84",
+      "reviewCount": "273"
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "dayOfWeek": [
+          "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+        ],
         "opens": "09:00",
         "closes": "19:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday"],
-        "opens": "09:00",
-        "closes": "15:00"
       }
     ],
     "priceRange": "80-500 PLN",
@@ -62,12 +59,12 @@
   }
   </script>
 </head>
-<body>
+<body class="theme-emerald">
   <!-- Navigation -->
   <nav class="nav">
     <div class="container">
       <div class="nav-content">
-        <a href="index.html" class="logo"><img src="https://d375139ucebi94.cloudfront.net/region2/pl/177023/logo/3f59dc8117a04b05a6fcd7481dc490-clover-beauty-studio-school-logo-2f29787aff4c4b878d16d34ae87509-booksy.jpeg" alt="Clover Beauty Studio & School" style="height: 65px;"></a>
+        <a href="index.html" class="logo"><img src="https://d375139ucebi94.cloudfront.net/region2/pl/177023/logo/3f59dc8117a04b05a6fcd7481dc490-clover-beauty-studio-school-logo-2f29787aff4c4b878d16d34ae87509-booksy.jpeg" alt="Clover Beauty Studio & School" loading="eager" fetchpriority="high" decoding="async"></a>
         <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
@@ -98,7 +95,7 @@
                 <span class="flag-icon">🇬🇧</span>
                 <span>English</span>
               </button>
-              <button class="lang-option" data-lang="uk">
+              <button class="lang-option" data-lang="ua">
                 <span class="flag-icon">🇺🇦</span>
                 <span>Українська</span>
               </button>
@@ -238,13 +235,13 @@
                   </div>
                 </div>
                 <div class="slider-labels">
-                  <span class="label-before">BEFORE</span>
-                  <span class="label-after">AFTER</span>
+                  <span class="label-before" data-i18n="transform.before">BEFORE</span>
+                  <span class="label-after" data-i18n="transform.after">AFTER</span>
                 </div>
               </div>
             </div>
             <div class="transformation-info">
-              <h3 data-i18n="transform.balayage.title">Balayage naturalne rozjaśnienie</h3>
+              <h3 data-i18n="transform.refresh.title">Transformacja i odświeżenie</h3>
               <p data-i18n="transform.balayage.desc">Czas: 3h • Produkty: Olaplex + profesjonalne tonery</p>
             </div>
           </div>
@@ -264,8 +261,8 @@
                   </div>
                 </div>
                 <div class="slider-labels">
-                  <span class="label-before">BEFORE</span>
-                  <span class="label-after">AFTER</span>
+                  <span class="label-before" data-i18n="transform.before">BEFORE</span>
+                  <span class="label-after" data-i18n="transform.after">AFTER</span>
                 </div>
               </div>
             </div>
@@ -412,9 +409,13 @@
         <div class="footer-col">
           <h4 data-i18n="footer.hours">Godziny otwarcia</h4>
           <ul class="hours-list">
-            <li><span data-i18n="hours.mon-fri">Pon - Pt</span> <strong>09:00 - 19:00</strong></li>
-            <li><span data-i18n="hours.saturday">Sobota</span> <strong>09:00 - 15:00</strong></li>
-            <li><span data-i18n="hours.sunday">Niedziela</span> <strong><span data-i18n="hours.closed">Zamknięte</span></strong></li>
+            <li>Poniedziałek <strong>09:00 - 19:00</strong></li>
+            <li>Wtorek <strong>09:00 - 19:00</strong></li>
+            <li>Środa <strong>09:00 - 19:00</strong></li>
+            <li>Czwartek <strong>09:00 - 19:00</strong></li>
+            <li>Piątek <strong>09:00 - 19:00</strong></li>
+            <li>Sobota <strong>09:00 - 19:00</strong></li>
+            <li>Niedziela <strong>09:00 - 19:00</strong></li>
           </ul>
         </div>
 
@@ -426,7 +427,7 @@
                 <path d="M17.5 8.33333C17.5 14.1667 10 19.1667 10 19.1667C10 19.1667 2.5 14.1667 2.5 8.33333C2.5 6.34421 3.29018 4.43655 4.6967 3.03602C6.10322 1.63548 8.01088 0.833328 10 0.833328C11.9891 0.833328 13.8968 1.63548 15.3033 3.03602C16.7098 4.43655 17.5 6.34421 17.5 8.33333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M10 10.8333C11.3807 10.8333 12.5 9.71404 12.5 8.33333C12.5 6.95262 11.3807 5.83333 10 5.83333C8.61929 5.83333 7.5 6.95262 7.5 8.33333C7.5 9.71404 8.61929 10.8333 10 10.8333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <a href="https://maps.app.goo.gl/LvQhzBKtrMuepuwp9" target="_blank" rel="noopener" aria-label="Zobacz na mapie Clover Beauty Studio & School">Aleja Rzeczypospolitej 8 Lokal u.6</a><br>02-972 Warszawa (Mokotów)
+              <a href="https://maps.app.goo.gl/LvQhzBKtrMuepuwp9" target="_blank" rel="noopener" aria-label="Zobacz na mapie Clover Beauty Studio & School">Aleja Rzeczypospolitej 8 Lokal u.6</a><br>02-972 Warszawa (Wilanów)
             </li>
             <li>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -475,6 +476,6 @@
     </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -1,44 +1,5 @@
-/* Basic reset */
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:#222; background:#fff; line-height:1.5; }
-img { max-width:100%; display:block; }
-a { color:#0d5c8c; text-decoration:none; }
-a:hover { text-decoration:underline; }
-:focus-visible { outline: 2px solid #0d5c8c; outline-offset:2px; }
-
-/* Layout */
-.container { width: min(1100px, 92%); margin-inline:auto; }
-.site-header { background:#ffffff; border-bottom:1px solid #eee; }
-.site-header.small { padding:.75rem 0; }
-.header-top { display:flex; align-items:center; gap:1rem; justify-content:space-between; padding:1rem 0; }
-.brand { font-size:1.25rem; font-weight:600; }
-.logo { height:48px; }
-.main-nav { display:flex; gap:1.25rem; }
-.main-nav a { padding:.25rem .5rem; }
-.header-actions { display:flex; align-items:center; gap:.75rem; }
-.nav-toggle { display:none; background:none; border:1px solid #333; padding:.4rem .6rem; border-radius:4px; font-size:1.1rem; cursor:pointer; }
-
-.hero { background:linear-gradient(90deg,#fafafa,#fff); padding:2.5rem 0; border-bottom:1px solid #eee; }
-.hero-inner { display:grid; gap:2rem; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); align-items:center; }
-.hero-text h1 { margin-top:0; font-size:clamp(1.8rem,4vw,2.6rem); }
-.hero-cta { display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem; }
-
-.features { padding:1.75rem 0; }
-.features-list { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:1rem; font-size:.95rem; }
-.features-list li { background:#f2f6f7; padding:.6rem .9rem; border-radius:30px; }
-
-.popular-services { padding:2rem 0; }
-.card-grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); }
-.card { border:1px solid #e3e6e8; padding:1rem; border-radius:10px; background:#fff; display:flex; flex-direction:column; gap:.5rem; }
-.card h3 { margin:.2rem 0 .4rem; font-size:1.05rem; }
-
-.testimonials { padding:2rem 0; }
-.testimonial-list { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); }
-blockquote { margin:0; background:#f8fafb; padding:1rem 1.1rem; border-left:4px solid #0d5c8c; border-radius:4px; font-size:.95rem; }
-.rating { margin-top:1rem; font-weight:600; }
-
-.map-cta { padding:2rem 0 2.5rem; text-align:center; }
+/* Deprecated file — Clover Beauty Studio & School
+  This legacy stylesheet has been removed intentionally. */
 
 /* Services page */
 .service-category { margin:2.5rem 0 1.75rem; }

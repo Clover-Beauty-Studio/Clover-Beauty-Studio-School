@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services & Pricing | Clover Beauty Studio & School Warsaw</title>
+  <meta name="description" content="Professional beauty services in Warsaw: brows, lashes, makeup and training. See our pricing and book an appointment.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://d375139ucebi94.cloudfront.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0E4D3F">
+  <script src="js/translations.js" defer></script>
+</head>
+<body class="theme-emerald">
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-content">
+        <a href="index.html" class="logo"><img src="https://d375139ucebi94.cloudfront.net/region2/pl/177023/logo/3f59dc8117a04b05a6fcd7481dc490-clover-beauty-studio-school-logo-2f29787aff4c4b878d16d34ae87509-booksy.jpeg" alt="Clover Beauty Studio & School" loading="eager" fetchpriority="high" decoding="async"></a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="index.html" data-i18n="nav.home">Strona główna</a></li>
+            <li><a href="services.html" class="active" data-i18n="nav.services">Usługi</a></li>
+            <li><a href="team.html" data-i18n="nav.team">Nasz zespół</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Galeria</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+          <div class="language-dropdown" id="languageDropdown">
+            <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="true" aria-expanded="false">
+              <span class="current-flag" id="currentFlag">🇵🇱</span>
+              <span class="current-lang" id="currentLang">PL</span>
+              <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 9L1 4h10z"/>
+              </svg>
+            </button>
+            <div class="lang-dropdown-menu" id="langDropdownMenu">
+              <button class="lang-option" data-lang="pl">
+                <span class="flag-icon">🇵🇱</span>
+                <span>Polski</span>
+              </button>
+              <button class="lang-option" data-lang="en">
+                <span class="flag-icon">🇬🇧</span>
+                <span>English</span>
+              </button>
+              <button class="lang-option" data-lang="ua">
+                <span class="flag-icon">🇺🇦</span>
+                <span>Українська</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-i18n="services.page.title">Nasze usługi</h1>
+      <p data-i18n="services.page.subtitle">Odkryj pełną gamę profesjonalnych usług fryzjerskich i pielęgnacyjnych</p>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- Service Categories Filter (aligned with Booksy) -->
+    <section class="services-filter">
+      <div class="container">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-category="all" data-i18n="services.filter.all">Wszystkie</button>
+          <button class="filter-btn" data-category="promo" data-i18n="services.filter.promo">Promocje</button>
+          <button class="filter-btn" data-category="hair" data-i18n="services.filter.hair">Fryzjerstwo 🍀</button>
+          <button class="filter-btn" data-category="brows" data-i18n="services.filter.browslashmakeup">Brows/Lashmaker/Make up✨</button>
+          <button class="filter-btn" data-category="evgenia" data-i18n="services.filter.evgenia">Farbowanie/cięcie/pielęgnacja Evgenia Kirichok</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promocje -->
+    <section id="promo" class="service-category alt-bg" data-category="promo">
+      <div class="container">
+        <div class="category-header">
+          <h2 data-i18n="svc.promo.title">Promocja do końca jesieni🍂</h2>
+          <p data-i18n="svc.promo.desc">Skorzystaj z ograniczonych czasowo ofert specjalnych</p>
+        </div>
+        <div class="services-list">
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Strzyżenie końcówek bez mycia / Кончики без мытья</h3>
+              <div class="service-tags">
+                <span class="tag">Młodszy Specjalista 80 zł</span>
+                <span class="tag">Top-Mistrzynia 130 zł</span>
+                <span class="tag">~40 min</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>80 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Strzyżenie dzieckie</h3>
+              <div class="service-tags">
+                <span class="tag">50–100 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>50 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Strzyżenie grzywki / Стрижка челки</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 50 zł</span>
+                <span class="tag">ART-Director 70 zł</span>
+                <span class="tag">~20 min</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>50 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Loki / Fale</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 150 zł+</span>
+                <span class="tag">ART-Director 180 zł+</span>
+                <span class="tag">~60–90 min</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>150 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Upięcia włosów / Причёска</h3>
+              <div class="service-tags">
+                <span class="tag">250 zł+</span>
+                <span class="tag">~90 min</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>250 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Total Blond do 3 cm / Тотал Блонд до 3 см</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 420 zł+</span>
+                <span class="tag">ART-Director 450 zł+</span>
+                <span class="tag">~3–4.5 h</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>420 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Total blond</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 600 zł+</span>
+                <span class="tag">ART-Director 750 zł+</span>
+                <span class="tag">~4–4.5 h</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>600 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Podniesienie techniki Wuale/Balayage/Refleksy</h3>
+              <div class="service-tags">
+                <span class="tag">Młodszy Specjalista 350–450 zł</span>
+                <span class="tag">Top-Mistrzynia 450 zł+</span>
+                <span class="tag">ART-Director 650 zł+</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>350 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Peeling / Пиллинг skóry głowy</h3>
+              <div class="service-tags">
+                <span class="tag">Młodszy Specjalista 80–100 zł</span>
+                <span class="tag">Top-Mistrzynia 90–100 zł</span>
+                <span class="tag">ART-Director 100 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>80 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Pielęgnacja włosów (ampułka) / Экспресс уход (ампула)</h3>
+              <div class="service-tags">
+                <span class="tag">Młodszy Specjalista 80 zł</span>
+                <span class="tag">Top/Art 100 zł+</span>
+                <span class="tag">1 dł: 100 zł • 2 dł: 120 zł • 3 dł: 150 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>80 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Botoks / Ботокс</h3>
+              <div class="service-tags">
+                <span class="tag">1 dł: 400–460 zł</span>
+                <span class="tag">2 dł: 460–600 zł</span>
+                <span class="tag">3 dł: 600–800 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>400 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Dekoloryzacja globalna / Wyjście z czarnego</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 800 zł+</span>
+                <span class="tag">ART-Director 1000 zł+</span>
+                <span class="tag">~7 h</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>800 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Plecenie włosów</h3>
+              <div class="service-tags">
+                <span class="tag">40 zł</span>
+                <span class="tag">~30 min</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>40 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Wyjście z blondu w naturalny / С блонда в натуральный</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 360 zł+</span>
+                <span class="tag">ART-Director 450 zł+</span>
+                <span class="tag">~3 h</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>360 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Zimna pielęgnacja SPA KERATIN / холодная реконструкция</h3>
+              <div class="service-tags">
+                <span class="tag">220–350 zł</span>
+                <span class="tag">~80 min</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>220 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Trwała / Биозавивка</h3>
+              <div class="service-tags">
+                <span class="tag">300–480 zł</span>
+                <span class="tag">dł. 60 cm + do 100 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>300 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Konsultacja o trwałej / Консультация о биозавивке</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>Darmowa</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Konsultacja / Консультация</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>Darmowa</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+          <article class="service-item featured">
+            <div class="service-badge-small">Promocja</div>
+            <div class="service-item-content">
+              <h3>Zestaw brwi + rzęsy/Пакет брови + ресниц</h3>
+              <p>Zestaw: laminacja + farbowanie + regulacja brwi ORAZ laminacja + farbowanie rzęs</p>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>312 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Dowolna regeneracja włosów + 🎁 peeling i modelowanie</h3>
+              <p>Przy każdej rekonstrukcji włosów otrzymasz w prezencie peeling skóry głowy i modelowanie</p>
+              <div class="service-tags">
+                <span class="tag">Promocja do 30.11.2025</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>180 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fryzjerstwo 🍀 -->
+    <section id="hair" class="service-category alt-bg" data-category="hair">
+      <div class="container">
+        <div class="category-header">
+          <h2 data-i18n="svc.hair.title">Fryzjerstwo 🍀</h2>
+          <p data-i18n="svc.hair.desc">Usługi strzyżenia, koloryzacji i stylizacji włosów</p>
+          <div class="category-note">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <p data-i18n="svc.hair.note">Ceny zależą od długości i gęstości włosów oraz wybranego poziomu stylisty.</p>
+          </div>
+        </div>
+
+        <div class="services-list">
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Laminacja + farbowanie + regulacja brwi</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>170 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Laminacja + farbowanie lub regulacja brwi</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>130 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Farbowanie brwi / окрашивание бровей</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>70 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Regulacja brwi</h3>
+              <div class="service-tags">
+                <span class="tag">40–50 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>40 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Farbowanie rzęs / окрашивание ресниц</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>60 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+          <article class="service-item featured">
+            <div class="service-badge-small">Popularne</div>
+            <div class="service-item-content">
+              <h3>Strzyżenie damskie /Стрижка женская</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 150–180 zł</span>
+                <span class="tag">ART-Director 170–210 zł</span>
+                <span class="tag">Młodszy Specjalista 100–120 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>100 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Strzyżenie męskie /Стрижка мужская</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 110 zł+</span>
+                <span class="tag">ART-Director 150 zł+</span>
+                <span class="tag">Młodszy Specjalista 70 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>70 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Kolor jednolity / Окрашивание w jeden ton</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 300–450 zł</span>
+                <span class="tag">ART-Director 320 zł+</span>
+                <span class="tag">Młodszy Specjalista 210–280 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>210 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Modelowanie włosów</h3>
+              <div class="service-tags">
+                <span class="tag">Młodszy Specjalista 80–100 zł</span>
+                <span class="tag">Top-Mistrzynia 110–150 zł</span>
+                <span class="tag">ART-Director 140–170 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>80 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Balayage / Wuale / Refleksy</h3>
+              <div class="service-tags">
+                <span class="tag">Młodszy Specjalista 400–550 zł</span>
+                <span class="tag">Top-Mistrzynia 550 zł+</span>
+                <span class="tag">ART-Director 700 zł+</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>400 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Airtouch / Shatush / Handtouch</h3>
+              <div class="service-tags">
+                <span class="tag">Top-Mistrzynia 750–1100 zł</span>
+                <span class="tag">ART-Director 950–1400 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>750 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Tonowanie</h3>
+              <div class="service-tags">
+                <span class="tag">Młodszy Specjalista 190–240 zł</span>
+                <span class="tag">Top-Mistrzynia 250–330 zł</span>
+                <span class="tag">ART-Director 300 zł+</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>190 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Odrost</h3>
+              <div class="service-tags">
+                <span class="tag">Młodszy Specjalista 190–220 zł</span>
+                <span class="tag">Top-Mistrzynia 250–280 zł</span>
+                <span class="tag">ART-Director 270 zł+</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>190 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Keratyna / Кератин</h3>
+              <div class="service-tags">
+                <span class="tag">Pierwsza długość 450–550 zł</span>
+                <span class="tag">Druga długość 550–680 zł</span>
+                <span class="tag">Trzecia długość 680–900 zł</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>450 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Regeneracja włosów / Braé, Kaaral</h3>
+              <div class="service-tags">
+                <span class="tag">Młodszy Specjalista od 130 zł</span>
+                <span class="tag">Top-Mistrzynia 180 zł+</span>
+                <span class="tag">ART-Director 180 zł+</span>
+              </div>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>130 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brows/Lashmaker/Make up✨ -->
+    <section id="brows" class="service-category" data-category="brows">
+      <div class="container">
+        <div class="category-header">
+          <h2 data-i18n="svc.brows.title">Brows/Lashmaker/Make up✨</h2>
+          <p data-i18n="svc.brows.desc">Stylizacja brwi, rzęs i profesjonalny makijaż</p>
+        </div>
+        <div class="services-list">
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Farbowanie + regulacja brwi</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>100 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Laminacja brwi</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>110 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Laminacja rzęs</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>190 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Makijaż ekspresowy</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>140 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Makijaż dzienny</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>200 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Makijaż wieczorowy</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>250 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Makijaż ślubny</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>300 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Permanentny makijaż</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>600 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evgenia-specific services -->
+    <section id="evgenia" class="service-category alt-bg" data-category="evgenia">
+      <div class="container">
+        <div class="category-header">
+          <h2 data-i18n="svc.evgenia.title">Farbowanie/cięcie/pielęgnacja Evgenia Kirichok</h2>
+          <p data-i18n="svc.evgenia.desc">Wybrane usługi prowadzone przez Yevhenię Kirichok</p>
+        </div>
+        <div class="services-list">
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Strzyżenie damskie / Стрижка женская</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>170 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Strzyżenie męskie/Стрижка мужская</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>160 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Kolor jednolity/Окрашивание w jeden ton</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>320 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Tonowanie</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>300 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Strzyżenie grzywki / Стрижка челки</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>70 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Modelowanie włosów</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>140 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Loki / Fale</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>190 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Odrost</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>270 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Konturing</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>450 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Pielęgnacja włosów / Экспресс уход</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>100 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Regeneracja włosów / Braé, Kaaral</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>180 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Wyjście z blondu w naturalny</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>450 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Konsultacja</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price"><strong>0,01 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Airtouch/Shatush/Handtouch</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>950 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Total Blond</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>750 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Balayage/Wuale/Refleksy</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>700 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-item-content">
+              <h3>Dekoloryzacja globalna / Wyjście z czarnego</h3>
+            </div>
+            <div class="service-item-booking">
+              <p class="service-price">od <strong>1000 zł</strong></p>
+              <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-secondary" target="_blank" rel="noopener" data-i18n="services.book">Zarezerwuj</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-cta" style="padding: 3rem 0; text-align: center;">
+      <div class="container">
+        <h2 style="margin-bottom: 1rem;" data-i18n="cta.transform.title">Gotowa na przemianę?</h2>
+        <p style="margin-bottom: 2rem; color: var(--color-text-light);" data-i18n="cta.transform.desc">Zarezerwuj swoją wizytę już dziś i ciesz się pięknem</p>
+        <a href="https://booksy.com/pl-pl/dl/show-business/177023" class="btn-primary" target="_blank" rel="noopener" data-i18n="cta.transform.button">Umów wizytę online</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Clover Beauty Studio & School</h3>
+          <p data-i18n="footer.desc">Professional beauty studio in Warsaw. We create beauty with passion and care.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/evgeniakirichok/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.quick">Szybkie linki</h4>
+          <ul>
+            <li><a href="services.html" data-i18n="nav.services">Usługi i cennik</a></li>
+            <li><a href="team.html" data-i18n="nav.team">Nasz zespół</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Galeria</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.hours">Godziny otwarcia</h4>
+          <ul class="hours-list">
+            <li>Poniedziałek <strong>09:00 - 19:00</strong></li>
+            <li>Wtorek <strong>09:00 - 19:00</strong></li>
+            <li>Środa <strong>09:00 - 19:00</strong></li>
+            <li>Czwartek <strong>09:00 - 19:00</strong></li>
+            <li>Piątek <strong>09:00 - 19:00</strong></li>
+            <li>Sobota <strong>09:00 - 19:00</strong></li>
+            <li>Niedziela <strong>09:00 - 19:00</strong></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">Kontakt</h4>
+          <ul class="contact-list">
+            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.5 8.33333C17.5 14.1667 10 19.1667 10 19.1667C10 19.1667 2.5 14.1667 2.5 8.33333C2.5 6.34421 3.29018 4.43655 4.6967 3.03602C6.10322 1.63548 8.01088 0.833328 10 0.833328C11.9891 0.833328 13.8968 1.63548 15.3033 3.03602C16.7098 4.43655 17.5 6.34421 17.5 8.33333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 10.8333C11.3807 10.8333 12.5 9.71404 12.5 8.33333C12.5 6.95262 11.3807 5.83333 10 5.83333C8.61929 5.83333 7.5 6.95262 7.5 8.33333C7.5 9.71404 8.61929 10.8333 10 10.8333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <a href="https://maps.app.goo.gl/LvQhzBKtrMuepuwp9" target="_blank" rel="noopener">Aleja Rzeczypospolitej 8 Lokal u.6</a></li>
+            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M18.3334 14.1V16.6C18.3343 16.8321 18.2867 17.0618 18.1937 17.2744C18.1008 17.487 17.9644 17.6779 17.7934 17.8349C17.6224 17.9919 17.4205 18.1112 17.2005 18.1856C16.9805 18.26 16.7472 18.288 16.5167 18.2683C13.9523 17.9892 11.489 17.1126 9.32506 15.7083C7.31152 14.4289 5.60445 12.7218 4.32506 10.7083C2.91672 8.53433 2.04007 6.05916 1.76673 3.48332C1.74708 3.25349 1.77488 3.02087 1.84889 2.80138C1.9229 2.58189 2.04159 2.38044 2.19775 2.20971C2.35392 2.03898 2.54388 1.90261 2.75575 1.80952C2.96762 1.71643 3.19665 1.66867 3.42839 1.66915H5.92839C6.32535 1.66532 6.71104 1.80592 7.01138 2.06388C7.31173 2.32184 7.50607 2.67972 7.55839 3.07332C7.65698 3.86001 7.84297 4.63494 8.11339 5.38332C8.22034 5.68899 8.2403 6.01985 8.17097 6.33686C8.10164 6.65387 7.94596 6.94407 7.72506 7.17415L6.68423 8.21498C7.84908 10.2965 9.5369 11.9843 11.6184 13.1492L12.6592 12.1083C12.8893 11.8874 13.1795 11.7317 13.4965 11.6624C13.8135 11.5931 14.1444 11.613 14.45 11.72C15.1984 11.9904 15.9734 12.1764 16.76 12.275C17.1585 12.3279 17.5206 12.5258 17.7795 12.8313C18.0385 13.1368 18.1764 13.5286 18.1684 13.9308L18.3334 14.1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <a href="tel:+48796591162">+48 796 591 162</a></li>
+            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3.33334 3.33333H16.6667C17.5833 3.33333 18.3333 4.08333 18.3333 5V15C18.3333 15.9167 17.5833 16.6667 16.6667 16.6667H3.33334C2.41668 16.6667 1.66668 15.9167 1.66668 15V5C1.66668 4.08333 2.41668 3.33333 3.33334 3.33333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.3333 5L10 10.8333L1.66666 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <a href="mailto:info@cloverbeauty.pl">info@cloverbeauty.pl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Clover Beauty Studio & School. Wszelkie prawa zastrzeżone.</p>
+        <div class="footer-links">
+          <a href="privacy.html">Polityka prywatności</a>
+          <span>•</span>
+          <a href="privacy.html#cookies">Polityka cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

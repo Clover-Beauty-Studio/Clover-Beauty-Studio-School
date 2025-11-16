@@ -1,6 +1,6 @@
-# 🌸 Ecosfera Salon Fryzjerski — Website
+# ✨ Clover Beauty Studio & School — Website
 
-> A beautiful, feminine, conversion-focused website for Ecosfera Salon Fryzjerski in Wilanów, Warsaw
+> A modern, conversion-focused website for Clover Beauty Studio & School in Wilanów, Warsaw
 
 ![Status](https://img.shields.io/badge/status-ready-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
@@ -23,7 +23,7 @@
 
 ## 🎯 Overview
 
-This is a complete, production-ready static website for **Ecosfera Salon Fryzjerski**, a premium hair salon located in Wilanów, Warsaw. The design focuses on a warm, feminine aesthetic with soft colors, elegant typography, and smooth animations to create an intimate, boutique feel.
+This is a complete, production-ready static website for **Clover Beauty Studio & School**, located in Wilanów, Warsaw. The design now uses an emerald palette with clean typography and smooth micro‑interactions.
 
 ### Business Goals
 
@@ -34,7 +34,7 @@ This is a complete, production-ready static website for **Ecosfera Salon Fryzjer
 ### Key Differentiators
 
 - Boutique, warm, intimate feel (not corporate)
-- Feminine color palette (Blush Pink #F6D7E3, Dusty Rose #C77A8A, Gold #C9A26B)
+- Emerald color palette (Deep Emerald #0E4D3F, Teal #127C62, Amber #F3A712)
 - Mobile-first responsive design
 - Fast loading (<2s on 4G)
 - Accessibility (WCAG 2.1 AA compliant)
@@ -45,7 +45,7 @@ This is a complete, production-ready static website for **Ecosfera Salon Fryzjer
 
 ### Design & UX
 
-- ✅ Elegant serif headings (Playfair Display) + clean body text (Inter)
+- ✅ Modern headings (Poppins) + clean body text (Inter)
 - ✅ Smooth animations & micro-interactions
 - ✅ Scroll-triggered reveal animations
 - ✅ Before/after transformation sliders
@@ -77,7 +77,7 @@ This is a complete, production-ready static website for **Ecosfera Salon Fryzjer
 - **HTML5** — Semantic structure
 - **CSS3** — Custom design system with CSS Variables
 - **Vanilla JavaScript** — ES6+, no frameworks
-- **Google Fonts** — Playfair Display, Inter
+- **Google Fonts** — Poppins, Inter
 - **SVG Icons** — Inline for performance
 
 ---
@@ -85,7 +85,7 @@ This is a complete, production-ready static website for **Ecosfera Salon Fryzjer
 ## 📁 Project Structure
 
 ```
-ecosfera-site/
+site/
 ├── index.html              # Homepage
 ├── services.html           # Services & pricing
 ├── team.html               # Team profiles
@@ -114,14 +114,14 @@ ecosfera-site/
 ### Run Locally
 
 **Option 1: VS Code Live Server**
-1. Open `ecosfera-site` folder in VS Code
+1. Open `site` folder in VS Code
 2. Install "Live Server" extension
 3. Right-click `index.html` → "Open with Live Server"
 4. Site opens at `http://localhost:5500`
 
 **Option 2: Python HTTP Server**
 ```bash
-cd ecosfera-site
+cd site
 python3 -m http.server 8000
 # Open http://localhost:8000
 ```
@@ -141,11 +141,11 @@ python3 -m http.server 8000
 2. Go to [netlify.com](https://netlify.com) → "New site from Git"
 3. Select repository
 4. Settings:
-   - **Base directory**: `ecosfera-site`
-   - **Publish directory**: `ecosfera-site`
+  - **Base directory**: `site`
+  - **Publish directory**: `site`
 5. Deploy!
 
-Site will be live at `https://ecosfera-salon.netlify.app` (customizable domain)
+Site will be live at your Netlify domain (customizable)
 
 ### Vercel
 
@@ -155,15 +155,15 @@ Site will be live at `https://ecosfera-salon.netlify.app` (customizable domain)
 4. Deploy!
 
 ### GitHub Pages
-Automated via GitHub Actions (`.github/workflows/pages.yml`). Serves the root of the repository which redirects to `ecosfera-site/`.
+Automated via GitHub Actions (`.github/workflows/pages.yml`). Serves the root of the repository which redirects to `site/`.
 
 1. Ensure workflow file is present (added in this repo).
 2. Push to `main` — action uploads and deploys.
 3. First run: go to Repository Settings → Pages and confirm it is enabled (should auto‑detect workflow).
-4. Site URL: `https://<YOUR-ACCOUNT>.github.io/Ecosfera-Salon-Fryzjerski/` (root redirects to `/ecosfera-site/index.html`).
+4. Site URL: `https://<YOUR-ACCOUNT>.github.io/Clover-Beauty-Studio-School/` (root redirects to `/site/index.html`).
 5. Cache/invalidations handled by Pages automatically; changes deploy on each push.
 
-If you prefer the folder source method (no workflow): set Source = `main` / root instead of `/ecosfera-site` so the redirect works. The current workflow is recommended for future extensibility (e.g. pre‑deploy checks, minification).
+If you prefer the folder source method (no workflow): set Source = `main` / root instead of `/site` so the redirect works. The current workflow is recommended for future extensibility (e.g. pre‑deploy checks, minification).
 
 ---
 
@@ -174,7 +174,7 @@ If you prefer the folder source method (no workflow): set Source = `main` / root
 Search and replace in all HTML files:
 
 - `+48 XXX XXX XXX` → Your phone number
-- `kontakt@ecosfera-salon.pl` → Your email
+- `info@cloverbeauty.pl` → Your email
 - Booksy links → Your actual Booksy URLs
 
 ### 2. Add Photos
@@ -268,7 +268,7 @@ Edit `css/styles.css`:
 
 ## 🤝 Contributing
 
-Private project for Ecosfera. Team members:
+Private project for Clover Beauty Studio & School. Team members:
 
 1. Create branch: `git checkout -b feature/your-feature`
 2. Make changes
@@ -280,18 +280,18 @@ Private project for Ecosfera. Team members:
 
 ## 📞 Support
 
-- **Email**: kontakt@ecosfera-salon.pl
-- **Phone**: +48 XXX XXX XXX
-- **Location**: Aleja Rzeczypospolitej 18, 02-972 Warszawa
+- **Email**: info@cloverbeauty.pl
+- **Phone**: +48 796 591 162
+- **Location**: Aleja Rzeczypospolitej 8 Lokal u.6, 02-972 Warszawa
 
 ---
 
-**Built with 💖 for Ecosfera Salon Fryzjerski**
+**Built with 💚 for Clover Beauty Studio & School**
 
 *Last updated: November 2025*
 
 ## Szybki start (VS Code)
-1. Otwórz folder `ecosfera-site` w VS Code.
+1. Otwórz folder `site` w VS Code.
 2. Zainstaluj rozszerzenie „Live Server”.
 3. PPM na `index.html` → „Open with Live Server”.
 4. Podmień placeholdery: numer telefonu, Booksy, e‑mail, zdjęcia.
