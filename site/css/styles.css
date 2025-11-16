@@ -515,13 +515,24 @@ button {
   overflow: hidden;
 }
 
+/* Aurora Borealis Effect Container */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  /* Removed missing asset to avoid 404 and layout jank */
-  background: none;
-  opacity: 0.1;
   pointer-events: none;
+  z-index: 1;
+}
+
+.hero-overlay canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-overlay {
+    display: none;
+  }
 }
 
 .hero-content {
