@@ -144,9 +144,26 @@ body {
   color: var(--color-text) !important;
 }
 
-.theme-emerald .nav,
-.theme-emerald .footer {
+.theme-emerald .nav {
   background: var(--color-bg-alt);
+}
+
+.theme-emerald .footer {
+  background: var(--color-text);
+  color: var(--color-white);
+}
+
+.theme-emerald .footer h3,
+.theme-emerald .footer h4,
+.theme-emerald .footer p,
+.theme-emerald .footer a,
+.theme-emerald .footer-col ul li,
+.theme-emerald .footer-bottom {
+  color: var(--color-white) !important;
+}
+
+.theme-emerald .footer a:hover {
+  color: var(--color-accent) !important;
 }
 
 /* Emerald nav clean overrides to avoid pink tints */
