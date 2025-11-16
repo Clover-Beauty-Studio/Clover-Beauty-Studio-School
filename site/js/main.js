@@ -96,6 +96,7 @@
 
   // Update all translatable elements
   function updateTranslations() {
+    // Text content translations
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       const translation = t(key);
@@ -105,7 +106,20 @@
           el.placeholder = translation;
         }
       } else {
-        el.textContent = translation;
+        // Handle blur-text elements specially
+        if (el.classList.contains('blur-text')) {
+          // Store original text for re-animation
+          const originalText = el.textContent;
+          if (originalText !== translation) {
+            // Re-initialize blur animation with new text
+            el.textContent = translation;
+            if (window.BlurTextAnimator) {
+              new window.BlurTextAnimator(el);
+            }
+          }
+        } else {
+          el.textContent = translation;
+        }
       }
     });
 

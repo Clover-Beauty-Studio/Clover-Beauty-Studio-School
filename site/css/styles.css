@@ -555,9 +555,23 @@ button {
 
 .hero-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
-  color: var(--color-secondary);
+  color: var(--color-white);
   margin-bottom: var(--space-sm);
   line-height: 1.1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0; /* spacing handled by word margins to avoid double spaces */
+}
+
+.hero-title .blur-word {
+  display: inline-block;
+  will-change: transform, filter, opacity;
+  margin-right: 0.25em;
+}
+
+.hero-title .blur-word:last-child {
+  margin-right: 0;
 }
 
 .hero-subtitle {
@@ -856,6 +870,73 @@ button {
 
 .btn-text:hover {
   color: var(--color-secondary);
+}
+
+/* === Glass Buttons (Glassmorphism) === */
+/* Apply glass surface styling to all primary button variants */
+.btn-hero,
+.btn-hero-ghost,
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.btn-team,
+.team-member .btn-small {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  -webkit-backdrop-filter: blur(12px) saturate(1.6) brightness(1.05);
+  backdrop-filter: blur(12px) saturate(1.6) brightness(1.05);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.btn-hero-ghost,
+.btn-outline {
+  border-width: 1px;
+}
+
+.btn-hero:hover,
+.btn-hero-ghost:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-outline:hover,
+.btn-team:hover,
+.team-member .btn-small:hover {
+  background: rgba(255, 255, 255, 0.20);
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.btn-hero:active,
+.btn-hero-ghost:active,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-outline:active,
+.btn-team:active,
+.team-member .btn-small:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .btn-hero,
+  .btn-hero-ghost,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline,
+  .btn-team,
+  .team-member .btn-small {
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+  }
 }
 
 /* === Transformations === */
