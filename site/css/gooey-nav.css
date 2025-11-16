@@ -80,14 +80,14 @@
   position: absolute;
   inset: 0;
   border-radius: 10px;
-  background: var(--color-white);
+  background: var(--color-secondary);
   opacity: 0;
   transform: scale(0);
   transition: all 0.3s ease;
   z-index: -1;
 }
 
-.gooey-nav-container li.active a { color: #0a0a0a; }
+.gooey-nav-container li.active a { color: var(--color-white); }
 .gooey-nav-container li.active::after { opacity: 1; transform: scale(1); }
 
 .gooey-nav-container .effect {
@@ -110,7 +110,7 @@
 }
 
 .gooey-nav-container .effect.text.active {
-  color: #0a0a0a;
+  color: var(--color-white);
 }
 
 .gooey-nav-container .effect.filter {
@@ -130,7 +130,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--color-white);
+  background: var(--color-secondary);
   transform: scale(0);
   opacity: 0;
   z-index: -1;

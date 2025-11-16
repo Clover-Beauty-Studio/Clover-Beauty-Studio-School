@@ -120,7 +120,9 @@
       textEl.classList.remove('active');
       void textEl.offsetWidth; // reflow
       textEl.classList.add('active');
-      makeParticles(filterEl);
+      if (options.particleCount > 0) {
+        makeParticles(filterEl);
+      }
     }
 
     // Bind events
@@ -160,8 +162,11 @@
       // If already enhanced, skip
       if (ul.closest('.gooey-nav-container')) return;
       // Wrap <li> anchors into required structure and start GooeyNav
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const particleCount = prefersReduced ? 0 : (isMobile ? 6 : 14);
       GooeyNav(ul, {
-        particleCount: 14,
+        particleCount,
         particleDistances: [80, 12],
         particleR: 90,
         animationTime: 600,
