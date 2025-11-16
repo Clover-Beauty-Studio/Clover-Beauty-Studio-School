@@ -872,6 +872,34 @@ button {
   color: var(--color-secondary);
 }
 
+/* === Glass Cards (Glassmorphism) === */
+.glass-card,
+.transformations .transformation-card,
+.team-member,
+.value-item {
+  background: rgba(255, 255, 255, 0.14);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4) brightness(1.05);
+  backdrop-filter: blur(14px) saturate(1.4) brightness(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-card,
+  .transformations .transformation-card,
+  .team-member,
+  .value-item {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  }
+}
+
 /* === Glass Buttons (Glassmorphism) === */
 /* Apply glass surface styling to all primary button variants */
 .btn-hero,
