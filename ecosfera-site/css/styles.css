@@ -36,23 +36,23 @@ img {
 }
 
 /* ========================================================================
-   ECOSFERA SALON FRYZJERSKI - FEMININE DESIGN SYSTEM
+   CLOVER BEAUTY STUDIO & SCHOOL - MODERN DESIGN SYSTEM
    ======================================================================== */
 
 /* === CSS Variables === */
 :root {
-  /* Colors - Blush & Rose Palette */
-  --color-primary: #F6D7E3;        /* Blush Pink */
-  --color-secondary: #C77A8A;      /* Dusty Rose */
-  --color-accent: #C9A26B;         /* Gold Accent */
-  --color-bg: #FAF5F2;             /* Warm Beige */
-  --color-bg-alt: #FFF8F5;         /* Lighter Beige */
-  --color-text: #2B2B2B;           /* Charcoal */
-  --color-text-light: #666;        /* Gray */
+  /* Colors - Fresh & Modern Palette */
+  --color-primary: #E8D5E0;        /* Soft Lavender */
+  --color-secondary: #9B7A9E;      /* Purple Mauve */
+  --color-accent: #B8956A;         /* Warm Gold */
+  --color-bg: #F9F6F8;             /* Light Lavender Gray */
+  --color-bg-alt: #FFFFFF;         /* Pure White */
+  --color-text: #2D2D2D;           /* Deep Charcoal */
+  --color-text-light: #6B6B6B;     /* Medium Gray */
   --color-white: #FFFFFF;
   
   /* Typography */
-  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Poppins', 'Montserrat', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   
   /* Spacing */

@@ -1,12 +1,15 @@
-/* ========================================================================
-   ECOSFERA SALON FRYZJERSKI - MAIN JAVASCRIPT
-   ======================================================================== */
+/*
+   CLOVER BEAUTY STUDIO & SCHOOL - MAIN JAVASCRIPT
+   Multi-language website with smooth animations
+   Author: Web Developer
+   Last Modified: January 2025
+*/
 
 (function() {
   'use strict';
 
   // === Language Support ===
-  let currentLang = localStorage.getItem('ecosfera-lang') || 'pl';
+  let currentLang = localStorage.getItem('clover-lang') || 'pl';
 
   // Load translations
   function t(key) {
@@ -52,7 +55,7 @@
   function switchLanguage(lang) {
     if (translations[lang]) {
       currentLang = lang;
-      localStorage.setItem('ecosfera-lang', lang);
+      localStorage.setItem('clover-lang', lang);
       updateTranslations();
     }
   }
@@ -732,7 +735,7 @@
   });
 
   // === Initialize all features when DOM is ready ===
-  console.log('Ecosfera website initialized ✨');
+  console.log('Clover Beauty Studio website initialized ✨');
   
 })();
 
