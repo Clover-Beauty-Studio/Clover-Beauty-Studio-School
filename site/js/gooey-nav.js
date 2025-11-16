@@ -162,15 +162,19 @@
       // If already enhanced, skip
       if (ul.closest('.gooey-nav-container')) return;
       // Wrap <li> anchors into required structure and start GooeyNav
-      const isMobile = window.matchMedia('(max-width: 768px)').matches;
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const particleCount = prefersReduced ? 0 : (isMobile ? 6 : 14);
+      const perfLow = document.documentElement.getAttribute('data-perf') === 'low';
+      // Adaptive particle count
+      let particleCount = 12;
+      if (prefersReduced) particleCount = 0;
+      else if (perfLow) particleCount = 5;
+      else particleCount = 15;
       GooeyNav(ul, {
         particleCount,
-        particleDistances: [80, 12],
-        particleR: 90,
+        particleDistances: [90, 10],
+        particleR: 100,
         animationTime: 600,
-        timeVariance: 320,
+        timeVariance: 300,
         colors: [1, 2, 3, 1, 2, 3, 1, 4],
         initialActiveIndex: Math.max(0, Array.from(ul.querySelectorAll('li')).findIndex(li => li.querySelector('a.active')))
       });

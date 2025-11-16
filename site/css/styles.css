@@ -145,7 +145,15 @@ body {
 }
 
 .theme-emerald .nav {
-  background: var(--color-bg-alt);
+  /* Glassy nav like buttons */
+  background: rgba(255, 255, 255, 0.14);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6) brightness(1.05);
+  backdrop-filter: blur(14px) saturate(1.6) brightness(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .theme-emerald .footer {
@@ -172,7 +180,10 @@ body {
   border-bottom: 1px solid rgba(18, 124, 98, 0.12);
 }
 .theme-emerald .nav.scrolled {
-  box-shadow: 0 8px 36px rgba(14, 77, 63, 0.12);
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.14);
 }
 .theme-emerald .nav::before,
 .theme-emerald .nav::after {
@@ -260,6 +271,7 @@ button {
   z-index: 1000;
   border-bottom: 1px solid rgba(246, 215, 227, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  isolation: isolate;
 }
 
 .nav::before {
@@ -395,10 +407,13 @@ button {
   position: absolute;
   top: calc(100% + 0.5rem);
   right: 0;
-  background: var(--color-white);
+  background: rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5) brightness(1.05);
+  backdrop-filter: blur(16px) saturate(1.5) brightness(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--radius-md);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(199, 122, 138, 0.1);
-  min-width: 180px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  min-width: 200px;
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
@@ -430,13 +445,14 @@ button {
 }
 
 .lang-option:hover {
-  background: rgba(246, 215, 227, 0.3);
-  color: var(--color-secondary);
+  /* Subtle emerald hover tint */
+  background: linear-gradient(135deg, rgba(18, 124, 98, 0.18) 0%, rgba(14, 77, 63, 0.12) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .lang-option.active {
-  background: linear-gradient(135deg, rgba(246, 215, 227, 0.5) 0%, rgba(199, 122, 138, 0.3) 100%);
-  color: var(--color-secondary);
+  background: linear-gradient(135deg, rgba(18, 124, 98, 0.28) 0%, rgba(14, 77, 63, 0.22) 100%);
+  color: var(--color-text);
   font-weight: 600;
 }
 
@@ -461,7 +477,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(18, 124, 98, 0.2) 0%, rgba(14, 77, 63, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(18, 124, 98, 0.16) 0%, rgba(14, 77, 63, 0.12) 100%);
   border-radius: var(--radius-sm);
   opacity: 0;
   transition: opacity 0.3s;
@@ -476,6 +492,12 @@ button {
 
 .nav-links a:hover::before {
   opacity: 1;
+}
+
+/* Subtle emerald hover tint only for non-active items */
+.theme-emerald .nav-links a:not(.active):hover {
+  background: rgba(18, 124, 98, 0.08);
+  box-shadow: 0 2px 8px rgba(18, 124, 98, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .nav-links a.active {
@@ -533,6 +555,18 @@ button {
   .hero-overlay {
     display: none;
   }
+}
+
+/* === Adaptive Performance (auto) === */
+[data-perf='low'] .hero-overlay { display: none !important; }
+[data-perf='low'] .gooey-nav-container .effect.filter,
+[data-perf='low'] .particle,
+[data-perf='low'] .point { display: none !important; }
+[data-perf='low'] .nav {
+  background: rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(8px) saturate(1.2) brightness(1.02);
+  backdrop-filter: blur(8px) saturate(1.2) brightness(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
 .hero-content {
